@@ -1,55 +1,57 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable, useColorScheme } from 'react-native';
-
-import Colors from '../../constants/Colors';
-
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import { Tabs } from 'expo-router';
+import { FontAwesome } from '@expo/vector-icons';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../_layout';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const { dark } = useContext(ThemeContext);
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-      }}>
+        tabBarActiveTintColor: dark ? '#4da3ff' : '#007AFF',
+        tabBarInactiveTintColor: dark ? '#bbb' : '#8E8E93',
+        tabBarStyle: {
+          backgroundColor: dark ? '#181818' : '#FFFFFF',
+          borderTopColor: dark ? '#232323' : '#e0e0e0',
+        },
+        headerShown: false,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          title: 'Home',
+          tabBarIcon: ({ color }) => <FontAwesome name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="sobre"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Sobre',
+          tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="experiencia-academica"
+        options={{
+          title: 'Acadêmico',
+          tabBarIcon: ({ color }) => <FontAwesome name="graduation-cap" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="experiencia-profissional"
+        options={{
+          title: 'Profissional',
+          tabBarIcon: ({ color }) => <FontAwesome name="briefcase" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="projetos"
+        options={{
+          title: 'Projetos',
+          tabBarIcon: ({ color }) => <FontAwesome name="code" size={24} color={color} />,
         }}
       />
     </Tabs>
   );
-}
+} 
