@@ -4,7 +4,7 @@
 
 ## Sobre
 
-Este é o portfólio mobile de **Vinícius Martins**, estudante de Ciência da Computação na Universidade Católica de Pernambuco. O projeto foi desenvolvido em React Native com Expo, apresentando experiências acadêmicas, projetos e um design moderno com suporte a tema claro/escuro.
+Portfólio mobile feito para a cadeira de Programação Web e Mobile. O projeto foi desenvolvido em React Native com Expo, apresentando experiências acadêmicas, projetos e um design moderno com suporte a tema claro/escuro.
 
 ---
 
