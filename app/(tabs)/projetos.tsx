@@ -39,7 +39,7 @@ const projects = [
   },
   {
     title: 'Protótipo BeeBlioteca',
-    description: 'Protótipo de aplicativo para gerenciamento de bibliotecas escolares, desenvolvido no Figma.',
+    description: 'Protótipo de aplicativo para gerenciamento de leitura que te acompanha antes, durante e depois da leitura..',
     image: require('../../assets/Imagem8.png'),
     github: '',
     demo: 'https://www.figma.com/proto/3jQVFXLb5AicrjZ07zpQ7m/Design-Projeto?node-id=1-2&starting-point-node-id=1%3A2&t=rMP8aSJovn0jdxVP-17',
