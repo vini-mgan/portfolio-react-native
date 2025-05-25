@@ -1,7 +1,5 @@
 # Portfólio Mobile - Vinícius Martins
 
-![Capa](assets/Imagem1.jpeg)
-
 ## Sobre
 
 Portfólio mobile feito para a cadeira de Programação Web e Mobile. O projeto foi desenvolvido em React Native com Expo, apresentando experiências acadêmicas, projetos e um design moderno com suporte a tema claro/escuro.
